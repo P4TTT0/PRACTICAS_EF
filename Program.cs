@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 //builder.Services.AddDbContext<TareasContext>(p => p.UseInMemoryDatabase("TareasDB")); //Metodo que nos permite agregar un contexto de base de datos en memoria.
-builder.Services.AddSqlServer<TareasContext>(@"Data Source = DESKTOP-RNP88KR\MSSQLSERVERDEV; Initial Catalog = TareasDb; user id=sa; password = sa; Trusted_Connection=True; Integrated Security=True;Trust Server Certificate=true");
+builder.Services.AddSqlServer<TareasContext>(builder.Configuration.GetConnectionString("cnTareas"));
 //Configura una instancia de SQL Server mediante un PATH (CADENA DE CONEXION)
 var app = builder.Build();
 
