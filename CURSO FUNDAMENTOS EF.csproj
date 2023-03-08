@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>CURSO_FUNDAMENTOS_EF</RootNamespace>
     <UserSecretsId>5f56df90-a94b-4488-8a61-410e08c3ead6</UserSecretsId>

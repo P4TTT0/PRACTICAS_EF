@@ -9,6 +9,14 @@ namespace CURSO_FUNDAMENTOS_EF.Models
 {
     public class Tarea
     {
+        public Tarea(Guid tareaId, Guid categoriaId, string titulo, Prioridad prioridadTarea)
+        {
+            this.TareaId = tareaId;
+            this.CategoriaId = categoriaId;
+            this.Titulo = titulo;
+            this.PrioridadTarea = prioridadTarea;
+            this.FechaCreacion = DateTime.Now;
+        }
         //[Key] //DataAnnotations -> Forzamos a utilizar esta propiedad como PK.
         public Guid TareaId {get; set;}
         //[ForeignKey("CategoriaId")] //DataAnnotations -> Forzamos a utilizar esta propiedad como FK bajo el nombre 'CategoriaId'

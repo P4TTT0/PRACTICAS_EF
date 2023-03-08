@@ -8,6 +8,18 @@ namespace CURSO_FUNDAMENTOS_EF.Models
 {
     public class Categoria
     {
+        public Categoria(Guid categoriaId, string nombre, int peso) 
+        {
+            this.CategoriaId = categoriaId;
+            this.Nombre = nombre;
+            this.Peso = peso;
+        }
+
+        public Categoria(Guid categoriaId, string nombre, int peso, string descripcion) : this(categoriaId, nombre, peso) 
+        {
+            this.Descripcion = descripcion;
+        }
+
         //[Key] //DataAnnotations -> Forzamos a utilizar esta propiedad como PK.
         public Guid CategoriaId {get; set;}
         //[Required] //DataAnnotations -> Forzamos a que esta propiedad sea requeridad al momento en el que nosotros intentemos insertar un nuevo registro dentro de la tabla categorias.
