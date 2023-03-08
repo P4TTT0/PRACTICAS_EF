@@ -32,7 +32,6 @@ namespace CURSO_FUNDAMENTOS_EF
                 tarea.Property(t => t.Descripcion);
                 tarea.Property(t => t.PrioridadTarea);
                 tarea.Property(t => t.FechaCreacion);
-
             });
         }
 
