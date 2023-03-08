@@ -32,6 +32,7 @@ namespace CURSO_FUNDAMENTOS_EF
                 tarea.Property(t => t.Descripcion);
                 tarea.Property(t => t.PrioridadTarea);
                 tarea.Property(t => t.FechaCreacion);
+                tarea.Ignore(t => t.Resumen); //Indicamos que esta propiedad no tendra que ser tomada en cuenta a la hora de realizar la tabla
             });
         }
 
